@@ -1,0 +1,138 @@
+.container {
+    padding: 30px 15px 30px 15px;
+    color: #000;
+}
+.userStart{
+    .userStart-header {
+        .header-cont{
+            width: 100%; 
+            display: flex;
+            padding-bottom: 70px;
+            h4 {
+                text-align: center;
+                display: block;
+                width: 100%;
+                font-size: 40px;
+            }
+            .close{
+                font-size: 45px;
+                font-weight: 400;
+            }
+        }
+    }
+ 
+    .userStart-body{
+        .buildProfile {
+            font-size: 27px;
+            word-spacing: 6px;
+            padding-bottom: 40px;
+        }
+        .quiz-btn{
+            text-align: center;
+            padding-bottom: 50px;
+            button{
+                padding: 5px 40px;
+                font-size: 25px;
+            }
+        }
+        .backToMenu{
+            font-size: 19px;
+            color: #000;
+            text-decoration: underline;
+        }
+        .backToMenu:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+    .userStart-footer{
+        border-top: none;
+        padding-top: 40px;
+        .form-check-label{
+            font-size: 14px;
+            color: #00000054;
+            font-weight: 600;
+        }
+        p{
+            .readMore{
+                font-size: 15px;
+                color: #000;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+        .privacyPolicy{
+            .privacyLink{
+                color: #00000052;
+                font-size: 13px;
+                text-decoration: underline;
+                cursor: pointer;
+                font-weight: 600;
+            }
+        }
+    } 
+}
+
+// -------------------------- existing user 
+.existingUser {    
+    .existingUser-body {
+        .letUsKnow {
+            h4 {
+                text-transform: uppercase;
+                color: #0000008c;
+                font-size: 18px;
+                margin: 0px;
+            }
+            p {
+                font-size: 20px;
+                font-weight: 500;
+            }
+        }
+        .topPic{
+            padding-bottom: 20px;
+            h4 {
+                text-transform: uppercase;
+                color: #0000008c;
+                font-size: 18px;
+                margin: 0px;
+                padding-bottom: 20px;
+            }
+
+            .row {
+                .col-8{
+                    p {
+                        font-size: 17px;
+                        text-align: justify;
+                        font-weight: 500;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .palateMatches {
+            h4 {
+                text-transform: uppercase;
+                color: #0000008c;
+                font-size: 18px;
+                margin: 0px;
+                padding-bottom: 20px;
+            }
+
+            .row {
+                .col-8{
+                    p {
+                        font-size: 17px;
+                        text-align: justify;
+                        font-weight: 500;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    .existingUser-footer{
+        border-top: none;
+        padding-top: 40px;
+        
+    }
+}

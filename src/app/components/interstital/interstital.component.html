@@ -1,0 +1,96 @@
+<!-- profile not exist -->
+<div *ngIf="!isProfileExist">
+	<div class="container" role="main">
+		<div class="row">
+			<div class="userStart col-xs-12 col-sm-12 col-md-4 col-lg-4 mx-auto">
+				<app-header></app-header>
+				<div class="userStart-body">
+					<p class="buildProfile">Build a profile and get great recommendations!</p><br>
+					<div class="quiz-btn">
+						<button type="button" class="btn btn-danger p-1 pr-5 pl-5">
+							Start Quiz
+						</button>
+					</div>
+					<p class="text-center"><a class="backToMenu" data-dismiss="modal">No thanks, just the menu</a></p>
+				</div>
+				<div class="userStart-footer">
+					<div class="acceptCookies mr-auto">
+						<div class="form-check">
+							<label class="form-check-label">
+								<input type="checkbox" class="form-check-input" value="">Accept Cookies
+							</label>
+						</div>
+						<p>This site uses cookies to preserve your personal palate profile. <a
+								href="https://www.google.com/" class="readMore">Read more..</a></p>
+					</div>
+					<div class="privacyPolicy ml-auto">
+						<a class="privacyLink"
+							href="https://policymaker.io/privacy-policy/?gclid=CjwKCAjwnef6BRAgEiwAgv8mQUmWzosSlieOnb5YO1GCNmz-UVo1jFdx2wnQpRtybYx8C8p7d5Yg6hoCmxYQAvD_BwE">View
+							our Privacy Policy</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<!-- profile exist -->
+<div *ngIf="isProfileExist">
+	<div [ngSwitch]="templateFlag">
+	<div class="existingUser col-xs-12 col-sm-12 col-md-4 col-lg-4 mx-auto" *ngSwitchCase="'winelist'">
+		<app-header></app-header>
+		<div class="existingUser-body">
+			<div class="letUsKnow">
+				<h4>Let us know</h4>
+				<p>
+					<a href="javascript:void(0)" (click)="LastRecommendation()">Did you like </a>our last suggestion?</p>
+			</div>
+			<div class="topPic">
+				<h4>Top pick for you</h4>
+				<div class="row" *ngFor="let rec of profileRecord">
+					<div class="col-8">
+						<p (click)="showWienDetails(rec)">
+							{{rec.wine.name}}
+						</p>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+			</div>
+			<div class="palateMatches">
+				<h4>Palate maches for you</h4>
+				<div class="row" *ngFor="let rec of profileRecord">
+					<div class="col-8">
+						<p (click)="showWienDetails(rec)">{{rec.wine.name}}</p>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="existingUser-footer">
+			<div class="row">
+				<div class="col-6 mr-auto">
+					<button type="button" class="btn">QUIZ</button>
+				</div>
+				<div class="col-6 text-right">
+					<button type="button" class="btn">MENU</button>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+	<!-- - Recommendation details  -->
+	<div *ngSwitchCase="'recommendations'">
+		<app-recommedation-details [Details]="selectedWineRecommendation" (backbtn)="Back($event)"></app-recommedation-details>
+	</div>
+	<!-- Rating -->
+	<div *ngSwitchCase="'rating'">
+		<app-rating [details]="lastSuggestion" (backbtn)="Back($event)"> </app-rating>
+
+	</div>
+</div>
+</div>

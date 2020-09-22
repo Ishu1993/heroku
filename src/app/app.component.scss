@@ -1,0 +1,87 @@
+.container-fluid {
+    padding: 100px 15px 100px 15px;
+    color: #000;
+}
+.bodyContent{
+    color: #fff;
+}
+.modal{
+    padding-top: 50px;
+    width: 100%;
+    .modal-header {
+        border-bottom: none;
+ 
+        h4 {
+            text-align: center;
+            display: block;
+            width: 100%;
+        }
+        .close{
+            font-size: 33px
+        }
+    }
+ 
+    .modal-body{
+        .buildProfile {
+            font-size: 20px;
+        }
+        .quiz-btn{
+            text-align: center;
+        }
+        .backToMenu{
+            font-size: 15px;
+            color: #000;
+            text-decoration: underline;
+        }
+        .backToMenu:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+    .modal-footer{
+        border-top: none;
+        .form-check-label{
+            font-size: 14px;
+            color: #00000054;
+            font-weight: 600;
+        }
+        p{
+            .readMore{
+                font-size: 15px;
+                color: #000;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+        .privacyPolicy{
+            .privacyLink{
+                color: #00000052;
+                font-size: 13px;
+                text-decoration: underline;
+                cursor: pointer;
+                font-weight: 600;
+            }
+        }
+    } 
+}
+@media (min-width: 280px ) and (max-width: 650px){
+    .modal{
+        padding-top: 100px;
+        .modal-content{
+            width: 90%;
+        }
+    }
+}
+@media (min-width: 320px ) and (max-width: 568px){
+    .modal{
+        padding-top: 100px;
+        .modal-content{
+            width: 90%
+        }
+    }
+}
+@media (min-width: 768px ) and (max-width: 1024px){
+    .modal{
+        padding-top: 100px;
+    }
+}
